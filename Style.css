@@ -8,17 +8,29 @@
     src: url(/Fonts/MontserratAlternates-Bold.ttf); /* Путь к файлу со шрифтом */
    }
 
+@font-face {
+    font-family: MontserratAlternates-light; /* Гарнитура шрифта */
+    src: url(/Fonts/MontserratAlternates-Light.ttf); /* Путь к файлу со шрифтом */
+   }
+
+
+
 *{
     margin: 0;
+    text-decoration: none;
+    color:rgb(95, 164, 69);
+    
 }
 
 html,body{
     height: 100%;
     background-color:rgb(252, 249, 244);
+    overflow-x: hidden;
 }
 
 img{
     max-width: 100%;
+ 
 }
 
 .main-header{
@@ -30,13 +42,22 @@ img{
 
 }
 
-.wrapper{
-    width: 80%;
+.wrapper-100{
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 
-    position: absolute;
+}
+
+.wrapper-80{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+
 }
 
 .header-menu{
@@ -55,12 +76,74 @@ img{
     font-family: "MontserratAlternates-regular";
 }
 
-.menu-item a{
-    text-decoration: none;
-    color:rgb(95, 164, 69);
-}
 
 .logo{
     width: 80px;
 }
 
+
+.block{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.first{
+    margin-top: -120px;
+}
+
+h1{
+    font-family: "MontserratAlternates-bold";
+    font-size: 50px;
+    padding-bottom: 10px;
+
+}
+
+.monk{
+    width: 450px;
+    z-index: 1;
+}
+
+p{
+    font-family: "MontserratAlternates-light";
+    font-size: 24px;
+
+}
+.text{
+    margin-top: -50px;
+}
+.button{
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: "MontserratAlternates-bold";
+    padding: 25px;
+    font-size: 24px;
+    margin-top: 40px;
+    border-radius: 24px;
+    width: 200px;
+    background-color: rgb(95, 164, 69);
+    border: 2px solid rgb(95, 164, 69);
+    position: absolute;
+    transition: 500ms;
+    
+}   
+.button:hover{
+    background-color:rgb(252, 249, 244) ;
+    color:rgb(95, 164, 69);
+    transition: 200ms;
+    
+}
+
+.lines{
+    position:absolute;
+    left: 55%;
+    z-index: 0;
+    height: 110%;
+}
+
+.bot{
+    background-color: rgb(95, 164, 69);
+}
