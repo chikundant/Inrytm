@@ -1,0 +1,66 @@
+@font-face {
+    font-family: MontserratAlternates-regular; /* Гарнитура шрифта */
+    src: url(/Fonts/MontserratAlternates-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+
+@font-face {
+    font-family: MontserratAlternates-bold; /* Гарнитура шрифта */
+    src: url(/Fonts/MontserratAlternates-Bold.ttf); /* Путь к файлу со шрифтом */
+   }
+
+*{
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+    background-color:rgb(252, 249, 244);
+}
+
+img{
+    max-width: 100%;
+}
+
+.main-header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 120px;
+    align-items: center;
+
+}
+
+.wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+}
+
+.header-menu{
+    list-style: none;
+
+    display: flex;
+
+    width: 500px;
+    justify-content: space-between;
+    
+}
+
+.menu-item{
+    display: flex;
+    font-size: 24px;
+    font-family: "MontserratAlternates-regular";
+}
+
+.menu-item a{
+    text-decoration: none;
+    color:rgb(95, 164, 69);
+}
+
+.logo{
+    width: 80px;
+}
+
