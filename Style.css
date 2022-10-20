@@ -27,6 +27,9 @@ html,body{
     background-color:rgb(252, 249, 244);
     overflow-x: hidden;
 }
+.white{
+    color: white;
+}
 
 img{
     max-width: 100%;
@@ -39,6 +42,7 @@ img{
     position: relative;
     height: 120px;
     align-items: center;
+    z-index: 3;
 
 }
 
@@ -47,7 +51,7 @@ img{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    margin: 25px;
 
 }
 
@@ -62,9 +66,7 @@ img{
 
 .header-menu{
     list-style: none;
-
     display: flex;
-
     width: 500px;
     justify-content: space-between;
     
@@ -75,29 +77,34 @@ img{
     font-size: 24px;
     font-family: "MontserratAlternates-regular";
 }
+.menu-item a:hover{
+    color: rgb(156, 204, 138)
+}
+.menu-item a:active{
+    color: rgb(83, 152, 58)
+}
 
+.lines{
+    position:absolute;
+    left: 55%;
+    z-index: 0;
+    height: 110%;
+}
 
 .logo{
     width: 80px;
 }
 
 
-.block{
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
 .first{
     margin-top: -120px;
+    
 }
 
 h1{
     font-family: "MontserratAlternates-bold";
     font-size: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
 }
 
@@ -112,7 +119,7 @@ p{
 
 }
 .text{
-    margin-top: -50px;
+    margin-top: -100px;
 }
 .button{
     display: block;
@@ -137,13 +144,41 @@ p{
     
 }
 
-.lines{
-    position:absolute;
-    left: 55%;
-    z-index: 0;
-    height: 110%;
+.button:active{
+    background-color:rgb(235, 249, 227) ;
+    color:rgb(95, 164, 69);
+    transition: 200ms;
 }
 
-.bot{
+.block{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bot-1{
     background-color: rgb(95, 164, 69);
+    margin-left: -25px;
+}
+
+.bot-2{
+    background-color: rgb(95, 164, 69);
+    padding-right: 25px;
+}
+
+.phone{
+    margin-left: 45px;
+}
+
+aside{
+    margin: 20px;
+}
+
+
+
+.courses{
+    height: 100vh;
 }
