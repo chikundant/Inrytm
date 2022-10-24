@@ -28,7 +28,9 @@ html,body{
     overflow-x: hidden;
 }
 
-
+li{
+    list-style: none;
+}
 
 .white-bg{
     background-color: white;
@@ -103,7 +105,8 @@ img{
 .header-menu{
     list-style: none;
     display: flex;
-    width: 500px;
+    max-width: 700px;
+    min-width: 700px;
     justify-content: space-between;
     
 }
@@ -231,11 +234,11 @@ aside
 }
 
 .courses{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .text{
-    text-align: center;
+    text-align: left;
     display: block;
     padding: 50px;
 
@@ -311,6 +314,9 @@ aside
 
     -webkit-box-shadow: 4px 9px 9px -6px #c0e7b0; 
     box-shadow: 4px 9px 9px -6px #c0e7b0;
+
+    float: left;
+    margin: 25px;
     
 }
 
@@ -386,3 +392,55 @@ h3{
 span{
     font-family: "MontserratAlternates-regular";
 }
+
+
+.left{
+    float: left;
+;
+}
+
+.courses-wrapper{
+
+    display: inline-block;
+    margin: 0px auto;
+
+}
+
+
+.icon{
+    max-width: 120px;
+    padding-right: 25px;
+}
+
+.icon-block{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.goals{
+    min-width: 100vh;
+    align-items: baseline;
+}
+
+
+.faq{
+    background-color: aquamarine;
+    width: 80%;
+}
+
+.menu-list{
+    background-color: #c0e7b0;
+}
+
+
+.answer{
+    display: none;
+}
+
+
+.question{
+    cursor: pointer;
+}
+
