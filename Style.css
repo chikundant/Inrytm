@@ -275,7 +275,7 @@ aside
 }
 
 .button-2:active{
-    background-color:rgb(113, 167, 93) ;
+    background-color:rgb(113, 167, 93);
     transition: 200ms;
 }
 
@@ -426,21 +426,41 @@ span{
 
 
 .faq{
-    background-color: aquamarine;
     width: 80%;
+    margin-top: 100px;
+    padding-bottom: 15px;
 }
 
 .menu-list{
-    background-color: #c0e7b0;
+    
 }
 
 
 .answer{
+
+}
+
+.hide{
     display: none;
+    visibility: hidden;
+
 }
 
 
 .question{
     cursor: pointer;
+    user-select: none;
 }
 
+
+.faq-item{
+    border: 1px solid rgb(113, 167, 93);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+}
+
+.faq-item:last-child{
+    border-bottom: 1px solid rgb(113, 167, 93); 
+}

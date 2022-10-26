@@ -1,18 +1,14 @@
-function myFunction() {
-    document.getElementsByClassName("question").classList.toggle("show");
-}
+window.onload=function(){
+  const question = document.getElementsByClassName('question');
+  const answer = document.getElementsByClassName("answer");
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('question')) {
-
-    var dropdowns = document.getElementsByClassName("answer");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+  question[0].addEventListener('click', function(e){
+    answer[0].classList.toggle('hide')
+  })
+  question[1].addEventListener('click', function(e){
+    answer[1].classList.toggle('hide')
+  })
+  question[2].addEventListener('click', function(e){
+    answer[2].classList.toggle('hide')
+  })
 }
