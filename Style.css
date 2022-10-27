@@ -145,6 +145,7 @@ img{
 aside
 {
     margin: 20px;
+    height: 100%;
 }
 
 .lines{
@@ -204,6 +205,34 @@ aside
     transition: 200ms;
 }
 
+.button-3{
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: "MontserratAlternates-bold";
+    padding: 25px;
+    font-size: 24px;
+    margin-top: 40px;
+    border-radius: 24px;
+    width: 200px;
+
+
+    background-color: rgb(95, 164, 69);
+    color: rgb(252, 249, 244);
+    border: 2px solid white;
+
+    transition: 200ms;
+    
+}   
+.button-3:hover{
+    background-color: rgb(252, 249, 244);
+    color: rgb(95, 164, 69);
+}
+
+.button-3:active{
+    background-color:rgb(225, 248, 219);
+    transition: 200ms;
+}
 
 
 .course{
@@ -215,8 +244,8 @@ aside
     
     position: relative;
 
-    width: 400px;
-    height: 700px;
+    width: 500px;
+    height: 1100px;
     border-radius: 43px 43px 0px 0px;
     
 }
@@ -226,8 +255,8 @@ aside
     align-items: center;
     justify-content: center;
 
-    height: 136px;
-    width: 400px;
+    height: 80px;
+    width: 500px;
     background-color: green;
 
     border-radius: 43px 43px 0px 0px;
@@ -240,13 +269,36 @@ aside
 .text{
     text-align: left;
     display: block;
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
 
     font-size:x-large;
 
-    padding-top: 100px;
+    padding-top: 10px;
 }
+.course-text{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    
+    font-size:24px;
 
+    font-family: "MontserratAlternates-light";
+    
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    list-style: circle;
+}
+.course-text li{
+    display: block;
+    border: 1px solid rgb(95, 164, 69);
+    padding: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
 .button-2{
     display: block;
     color: white;
@@ -266,7 +318,7 @@ aside
 
     position: absolute;
 
-    top:550px
+    bottom:40px;
     
 }  
 .button-2:hover{
@@ -299,7 +351,6 @@ aside
     text-align: center;
     
 }
-
 .feedback{
     width: 300px;
     height: 450px;
@@ -379,7 +430,7 @@ p{
 
 
 .text-block h1{
-    padding: 100px;
+    padding-bottom: 50px;
 }
 
 
@@ -400,9 +451,12 @@ span{
 }
 
 .courses-wrapper{
-
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     margin: 0px auto;
+    padding-top: 50px;
 
 }
 
@@ -464,3 +518,4 @@ span{
 .faq-item:last-child{
     border-bottom: 1px solid rgb(113, 167, 93); 
 }
+
