@@ -243,11 +243,14 @@ aside
     align-items: center;
     
     position: relative;
-
-    width: 500px;
-    height: 1100px;
+    
+    width: 420px;
+    height: 950px;
     border-radius: 43px 43px 0px 0px;
     
+    box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
+    -webkit-box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
 }
 
 .course-head{
@@ -256,7 +259,7 @@ aside
     justify-content: center;
 
     height: 80px;
-    width: 500px;
+    width: 425px;
     background-color: green;
 
     border-radius: 43px 43px 0px 0px;
@@ -280,13 +283,15 @@ aside
     display: flex;
     flex-direction: column;
     
-    font-size:24px;
+    font-size:18px;
 
-    font-family: "MontserratAlternates-light";
+    font-family: "MontserratAlternates-regular";
     
     width: 100%;
     margin: 0px;
     padding: 0px;
+
+    justify-content: space-between;
 
     list-style: circle;
 }
@@ -359,7 +364,7 @@ aside
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    
+    flex-wrap: wrap;
 
     margin: 0px auto;
 
@@ -457,25 +462,28 @@ span{
     justify-content: space-evenly;
     margin: 0px auto;
     padding-top: 50px;
+    flex-wrap: wrap;
 
 }
 
 
 .icon{
     max-width: 120px;
+    min-width: 100px;
     padding-right: 25px;
 }
 
 .icon-block{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 100px;
     margin-top: 100px;
+    
 }
 
 .goals{
     min-width: 100vh;
-    align-items: baseline;
+    
 }
 
 
