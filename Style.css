@@ -44,7 +44,7 @@
     margin: 0;
     text-decoration: none;
     color:rgb(95, 164, 69);
-    
+    scroll-behavior: smooth;
 }
 
 html,body{
@@ -130,15 +130,18 @@ img{
 .header-menu{
     list-style: none;
     display: flex;
-    max-width: 700px;
-    min-width: 700px;
+    align-items: center;
+    max-width: 900px;
+    min-width: 750px;
     justify-content: space-between;
     
 }
 .menu-item{
     display: flex;
-    font-size: 24px;
+    font-size: 20px;
     font-family: "MontserratAlternates-regular";
+    padding: 20px;
+    
 }
 
 .logo{
@@ -153,7 +156,28 @@ img{
     color: rgb(83, 152, 58)
 }
 
+.button{
+    color: white;
+    text-align: center;
+    background-color: rgb(95, 164, 69);
+    border: 2px solid rgb(95, 164, 69);
+    border-radius: 24px;
+    transition: 500ms;
+    padding: 20px;
+}
+ 
+.button:hover{
+    background-color:rgb(252, 249, 244) ;
+    color:rgb(95, 164, 69);
+    transition: 200ms;
+    
+}
 
+.button:active{
+    background-color:rgb(235, 249, 227) ;
+    color:rgb(95, 164, 69);
+    transition: 200ms;
+}
 
 
 .block{
@@ -271,7 +295,7 @@ aside
     
     width: 420px;
     height: 950px;
-    border-radius: 43px 43px 0px 0px;
+    border-radius: 43px 43px 43px 43px;
     
     box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
     -webkit-box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
@@ -310,7 +334,7 @@ aside
     
     font-size:18px;
 
-    font-family: "MontserratAlternates-regular";
+    font-family: "MontserratAlternates-bold";
     
     width: 100%;
     margin: 0px;
@@ -318,7 +342,8 @@ aside
 
     justify-content: space-between;
 
-    list-style: circle;
+    list-style-type: style;;
+    list-style:circle;
 }
 .course-text li{
     display: block;
@@ -339,7 +364,7 @@ aside
     margin-top: 40px;
     border-radius: 24px;
     width: 200px;
-    background-color: rgb(252, 249, 244);
+    background-color: rgb(255, 255, 255);
     border: 2px solid rgb(95, 164, 69);
     color: rgb(95, 164, 69);
 
@@ -582,3 +607,236 @@ footer{
 .gmail a{
     margin: 10px;
 }
+
+
+
+
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* фон */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+/* При отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 400px;
+      margin: 30px auto; /* отображение окна по центру */
+  }
+}
+/* Стили для блока с контентом окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* Стили заголовка окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: "MontserratAlternates-Bold";
+}
+/* Стили кнопки "х" ("Закрыть")  */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* Стили для закрывающей кнопки в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* Стили блока основного содержимого окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+#form::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.466) url('/Loading_icon.gif') center / 75px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+#form._sending::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.466) url('/Loading_icon.gif') center / 75px no-repeat;
+    opacity: 1;
+    visibility: visible;
+}
+
+#form._sent::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.466) url('/Loading_icon.gif') center / 75px no-repeat;
+    opacity: 1;
+    visibility: hidden;
+    display: none;
+}
+
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px auto;
+    align-items: center;
+}
+.form-item{
+    margin-top: 30px;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-input{
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(225, 225, 225);
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.form-item label{
+    font-family: "MontserratAlternates-Bold";
+}
+
+input:focus { 
+    outline: none !important;
+    border-color: rgb(113, 167, 93);
+    box-shadow: 0 0 10px rgb(113, 167, 93);
+}
+textarea:focus { 
+    outline: none !important;
+    border-color: rgb(113, 167, 93);
+    box-shadow: 0 0 10px rgb(113, 167, 93);
+}
+
+textarea{
+    padding-left: 5px;
+}
+
+::placeholder{
+    padding-left: 5px;
+    color: rgba(113, 167, 93, 0.518);
+}
+
+.submit-button{
+    color: white;
+    text-align: center;
+    background-color: rgb(95, 164, 69);
+    border: 2px solid rgb(95, 164, 69);
+    border-radius: 24px;
+    transition: 500ms;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.submit-button:hover{
+    background-color:rgb(252, 249, 244) ;
+    color:rgb(95, 164, 69);
+    transition: 200ms;
+    
+}
+
+.submit-button:active{
+    background-color:rgb(235, 249, 227) ;
+    color:rgb(95, 164, 69);
+    transition: 200ms;
+}
+

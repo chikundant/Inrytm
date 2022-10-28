@@ -26,6 +26,43 @@ question[6].addEventListener('click', function (e) {
 question[7].addEventListener('click', function (e) {
   answer[7].classList.toggle('hide')
 })
-question[8].addEventListener('click', function (e) {
-  answer[8].classList.toggle('hide')
-})
+
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.getElementById('form');
+  const modal = document.getElementsByClassName('modal')
+  
+  form.addEventListener('submit', formSend);
+
+  async function formSend(e){
+
+    e.preventDefault();
+
+    let formData = new FormData(form)
+
+
+
+
+    form.classList.add('_sending');
+    formData.append('test', 'qwe')
+
+    let response = await fetch('sendmail.php',{
+      method: 'POST',
+      body: formData
+    });
+
+    if (response.ok){
+      let result = await response.json();
+      alert(result.message);
+      //formPreview.innerHtml = '';
+      form.reset();
+
+      form.classList.remove('_sending')
+    } 
+    else{
+      alert("Помилка!")
+      form.classList.remove('_sending')
+      form.reset();
+    }
+	
+  }
+});
