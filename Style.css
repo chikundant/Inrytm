@@ -84,6 +84,15 @@ li{
 }
 
 
+hr{
+    border: none;
+    width: 80%;
+    background-color: rgba(94, 164, 69, 0.477);
+    height: 1px;
+
+    margin: 40px;
+
+}
 
 
 
@@ -98,7 +107,7 @@ img{
 }
 
 .monk{
-    z-index: 10;
+    z-index: 1;
     position: relative;
 }
 
@@ -106,13 +115,14 @@ img{
     display: flex;
     justify-content: center;
     position: relative;
-    max-height: 120px;
+    max-height: 80px;
     align-items: center;    
     z-index: 3;
+    box-shadow: 0px 1px 15px 0px rgba(96, 164, 69, 0.105);
 
 }
 .wrapper{
-    width: 85%;
+    width: 75%;
 
     display: flex;
     justify-content: space-evenly;
@@ -138,7 +148,7 @@ img{
 }
 .menu-item{
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "MontserratAlternates-regular";
     padding: 20px;
     
@@ -146,7 +156,8 @@ img{
 
 .logo{
     max-width: 100px;
-    min-width: 80px;
+    min-width: 60px;
+    z-index: 2;
 }
 
 .menu-item a:hover{
@@ -163,7 +174,7 @@ img{
     border: 2px solid rgb(95, 164, 69);
     border-radius: 24px;
     transition: 500ms;
-    padding: 20px;
+    padding: 10px;
 }
  
 .button:hover{
@@ -184,8 +195,6 @@ img{
     min-height: 100vh;
     padding-top: 80px;
     position: relative;
-    
-
     overflow: hidden;
 
 }
@@ -216,7 +225,7 @@ aside
 .head-text h1{
     font-family: "MontserratAlternates-bold";
     font-size: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     text-align: left;
 }
 
@@ -224,7 +233,23 @@ aside
     font-size: 24px;
     font-family: "MontserratAlternates-light";
 }
-
+.head-text ul{
+        margin: 0px;
+        margin-bottom: 10px;
+        padding: 0px;
+}
+.head-text li{
+        font-size: 28px;
+        font-family: "MontserratAlternates-regular";
+        margin: 0px;
+        padding-top: 25px;
+}
+.buttons-section {
+    display: flex;
+}
+.buttons-section a{
+    margin-right: 25px;
+}
 
 .button-1{
     display: block;
@@ -234,7 +259,7 @@ aside
     padding: 25px;
     font-size: 24px;
     margin-top: 40px;
-    border-radius: 24px;
+    border-radius: 50px;
     width: 200px;
     background-color: rgb(95, 164, 69);
     border: 2px solid rgb(95, 164, 69);
@@ -254,6 +279,37 @@ aside
     transition: 200ms;
 }
 
+.button-1-w{
+    display: block;
+    color: rgb(95, 164, 69);;
+    text-align: center;
+    font-family: "MontserratAlternates-bold";
+    padding: 25px;
+    font-size: 24px;
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 200px;
+    background-color: rgb(252, 249, 244);
+    border: 2px solid rgb(95, 164, 69);
+    transition: 500ms;
+    
+}   
+.button-1-w:hover{
+    background-color: rgb(95, 164, 69);
+    color: white;
+    transition: 200ms;
+    
+}
+
+.button-1-w:active{
+    background-color:rgb(95, 164, 69);
+    color:rgb(235, 249, 227) ;
+    transition: 200ms;
+}
+
+
+
+
 .button-3{
     display: block;
     color: white;
@@ -262,7 +318,7 @@ aside
     padding: 25px;
     font-size: 24px;
     margin-top: 40px;
-    border-radius: 24px;
+    border-radius: 50px;
     width: 200px;
 
 
@@ -285,33 +341,52 @@ aside
 
 
 .course{
-    background-color: white;
     display: flex;
     flex-direction: column;
 
     align-items: center;
     
     position: relative;
+    justify-content: space-around;
+
     
-    width: 420px;
-    height: 950px;
+    width: 350px;
+    min-height: 550px;
+    border: 2px solid rgba(0, 128, 0, 0.154);
     border-radius: 43px 43px 43px 43px;
     
-    box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
+    /* box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
     -webkit-box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
-    -moz-box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 7px 7px -6px rgba(0,0,0,0.46); */
 }
 
-.course-head{
+.course_description{
+    text-align: center;
+    font-size:larger;
+}
+
+
+
+.course-header{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    height: 80px;
-    width: 425px;
-    background-color: green;
-
     border-radius: 43px 43px 0px 0px;
+}
+.course-header h1{
+    margin-bottom: 10px;
+}
+.praices{
+    text-align: center;
+
+}
+.strike{
+    text-decoration: line-through;
+}
+.praices h2{
+    font-family: "MontserratAlternates-light";
 }
 
 .courses{
@@ -336,33 +411,24 @@ aside
 
     font-family: "MontserratAlternates-bold";
     
-    width: 100%;
+    width: 90%;
     margin: 0px;
     padding: 0px;
 
     justify-content: space-between;
-
-    list-style-type: style;;
-    list-style:circle;
+    
 }
-.course-text li{
-    display: block;
-    border: 1px solid rgb(95, 164, 69);
-    padding: 16px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
 
-}
+
 .button-2{
     display: block;
     color: white;
     text-align: center;
     font-family: "MontserratAlternates-bold";
-    padding: 25px;
+    padding: 20px;
     font-size: 24px;
     margin-top: 40px;
-    border-radius: 24px;
+    border-radius: 50px;
     width: 200px;
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(95, 164, 69);
@@ -371,7 +437,6 @@ aside
 
     transition: 500ms;
 
-    position: absolute;
 
     bottom:40px;
     
@@ -386,7 +451,41 @@ aside
     transition: 200ms;
 }
 
+.button-2-w{
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: "MontserratAlternates-bold";
+    padding: 20px;
+    font-size: 24px;
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(95, 164, 69);
 
+    border: 2px solid rgb(95, 164, 69);
+    transition: 500ms;
+
+
+    bottom:40px;
+    
+}  
+.button-2-w:hover{
+    background-color: rgb(95, 164, 69);
+    color: white;
+    border: 2px solid white;
+    
+}
+
+.button-2-w:active{
+    background-color:rgb(157, 204, 140);
+    transition: 200ms;
+}
+
+.brd-clr-white{
+    border: 2px solid rgb(106, 149, 90);
+}
 
 
 .height{
@@ -426,6 +525,7 @@ aside
     
 }
 
+
 .feedback-block{
     display: flex;
     align-items: center;
@@ -448,6 +548,15 @@ aside
 }
 .top-text{
     padding-left: 30px;
+    
+}
+.top-text h3{
+    text-align: left;
+    padding: 2px;
+}
+.top-text h2{
+    text-align: left;
+    padding: 2px;
 }
 
 
@@ -473,6 +582,11 @@ h1{
 
 }
 
+.goals p{
+    font-size: 18px;
+    font-family: "MontserratAlternates-light";
+}
+
 p{
     font-size: 24px;
     font-family: "MontserratAlternates-light";
@@ -491,9 +605,13 @@ p{
 
 h2{
     font-family: "MontserratAlternates-bold";
+    padding-bottom: 20px;
 }
+
 h3{
     font-family: "MontserratAlternates-regular";
+    text-align: center;
+    padding-bottom: 20px;
 }
 span{
     font-family: "MontserratAlternates-regular";
@@ -508,14 +626,14 @@ span{
 .courses-wrapper{
     display: flex;
     justify-content: center;
-    width: 100%;
-    justify-content: space-evenly;
+    width: 75%;
+    justify-content: space-around;
     margin: 0px auto;
-    padding-top: 50px;
     flex-wrap: wrap;
-
 }
-
+.mrgn-top{
+    margin-top: 50px;
+}
 
 .icon{
     max-width: 120px;
@@ -532,7 +650,6 @@ span{
 }
 
 .goals{
-    min-width: 100vh;
     
 }
 
@@ -574,6 +691,9 @@ span{
     border-right: none;
     padding: 20px;
 }
+.faq-item h2{
+    text-align: left;
+}
 
 .faq-item:last-child{
     border-bottom: 1px solid rgb(113, 167, 93); 
@@ -595,14 +715,14 @@ footer{
     display: flex;
 }
 .social-image{
-    margin: 50px 50px 10px 50px;
+    margin: 25px 25px 10px 25px;
 }
 
 .gmail{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding-bottom: 10px;
 }
 .gmail a{
     margin: 10px;
@@ -628,10 +748,11 @@ footer{
     padding: 0;
     display: block;
 }
+
 /* При отображении модального окно */
 .modal:target {
     opacity: 1; /* делаем окно видимым */
-	  pointer-events: auto; /* элемент видим для событий мыши */
+	pointer-events: auto; /* элемент видим для событий мыши */
     overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 /* ширина модального окна и его отступы от экрана */
@@ -738,7 +859,6 @@ footer{
     background: rgba(0, 0, 0, 0.466) url('/Loading_icon.gif') center / 75px no-repeat;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s ease 0s;
 }
 
 #form._sending::after{
@@ -760,12 +880,22 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.466) url('/Loading_icon.gif') center / 75px no-repeat;
+    background: rgb(247, 247, 247) url('/success-gif.gif') center / 200px no-repeat;
     opacity: 1;
-    visibility: hidden;
-    display: none;
+    visibility: visible;
 }
 
+#form._error::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255) url('/error.gif') center / 200px no-repeat;
+    opacity: 1;
+    visibility: visible;
+}
 
 
 
@@ -840,3 +970,272 @@ textarea{
     transition: 200ms;
 }
 
+
+.icon-c-g{
+    background: url("/Icons/check-mark.png") no-repeat;
+    width: 16px;
+    padding: 10px;
+}
+
+.icon-c-w{
+    background: url("/Icons/check-mark-w.png") no-repeat;
+    width: 16px;
+    padding: 10px;
+}
+
+
+.feedback-block .courses-wrapper{
+    padding-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-burger{
+    display: none;
+}
+
+
+/* Media */
+
+@media (max-width: 952px){
+    .header-burger{
+        display: block;
+        position: relative;
+        height: 20px;
+    }
+
+    .header-burger:before,
+    .header-burger:after{
+            z-index: 10;
+            content: '';
+            display: block;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+    }
+    .header-burger:before{
+        top: 0;
+
+    }
+    .header-burger:after{
+        bottom: 0;
+    }
+    .header-burger span{
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        width: 30px;
+        z-index: 2;
+    }
+
+    .main-header{
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* background-color: rgb(94, 164, 69); */
+        box-shadow: 1px 1px 1px 1px black;
+    }
+
+    .header-burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+
+    }
+    .header-burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header-burger.active span{
+        transform: scale(0);
+    }
+
+    .logo{
+        filter: brightness(20);
+        position: fixed;
+        left: 20px;
+        top: 5px;
+        min-width: 60px;
+    }
+    .header-burger{
+        position: fixed;
+        z-index: 4;
+        right: 70px;
+        top: 40px;
+    }
+    .head-text .wrapper{
+        flex-direction: column;
+    }
+
+    .header-menu{
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(94, 164, 69);
+        width: 100%;
+        height: 100%;
+        top:0;
+        user-select: none;
+        overflow: auto;
+        display: none;
+    }
+    .menu-item a{
+        color: white;
+    }
+    .menu-item{
+        text-align: center;
+        padding-left: 0px;
+    }
+    .header-menu.active{
+        flex-direction: column;
+        display: flex;
+    }
+    .strip:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(94, 164, 69);
+        z-index: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+    main{
+        margin-top: 75px;
+    }
+    body.lock{
+        overflow: hidden;
+    }
+    
+
+    
+
+
+
+
+    .goals{
+        display: block;
+    }
+
+    .icon-block{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .icon-block .icon{
+        padding-left: 26px;
+        padding-bottom: 20px;
+    }
+
+
+    .bot-1 .wrapper{
+        flex-direction: column-reverse;
+    }
+
+    #fq .wrapper{
+        width: 100%;
+    }
+    .faq-item .question,.answer{
+        text-align: left;
+    }
+    .faq{
+        width: 90%;
+    }
+    .menu-list{
+        width: 100%;
+        padding: 0px;
+    }
+
+
+
+    h1{
+        font-size: 35px;
+    }
+    .head-text h1{
+        font-size: 35px;
+    }
+
+    .courses .wrapper{
+        width: 100%;
+    }
+    .course{
+        border-radius: 0px;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        /* min-height: 1070px; */
+        min-height: auto;
+        max-height: 1300px;
+    }
+
+
+
+    .course-header p{
+        text-align: center;
+    }
+
+    .course-text{
+        height: auto;
+        overflow: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .button-2-w{
+        width: 140px;
+        position: relative;
+        margin-top: 60px;
+    }
+    .button-2{
+        width: 140px;
+        position: relative;
+        margin-top: 60px;
+    }
+
+    .text-block{
+        width: 100%;
+    }
+
+    .social-image{
+        margin: 30px 30px 0px 30px;
+
+    }
+    .social{
+        justify-content: center;
+        align-items: center;
+    }
+
+    p{
+        font-size: 18px;
+        font-family: "MontserratAlternates-light";
+    }
+    .bot-text-1 p{
+        font-size: 18px;
+    }
+}   

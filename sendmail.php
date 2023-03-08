@@ -13,8 +13,8 @@
     $mail->IsHtml(true);
 
     $mail->setFrom('dima.chikunda@gmail.com', 'Дима');
-    $mail->addAddress('chikunda.dima@gmail.com');
-    $mail->Subject = 'Новый клиен';
+    $mail->addAddress('rhythm.manage@gmail.com');
+    $mail->Subject = 'НОВИЙ КЛІЄНТ';
 
     $body = '<h1>Новый клиент!</h1>';
 
@@ -23,16 +23,21 @@
     }
 
     if(trim(!empty($_POST['username']))){
-        $body.='<p><strong>username:</strong>'.$_POST['username'].'</p>';
+        $body.='<p><strong>username: </strong>'.$_POST['username'].'</p>';
     }
 
     if(trim(!empty($_POST['phone']))){
-        $body.='<p><strong>phone:</strong>'.$_POST['phone'].'</p>';
+        $body.='<p><strong>phone: </strong>'.$_POST['phone'].'</p>';
     }
 
     if(trim(!empty($_POST['email']))){
-        $body.='<p><strong>email:</strong>'.$_POST['email'].'</p>';
+        $body.='<p><strong>email: </strong>'.$_POST['email'].'</p>';
     }
+
+    if(trim(!empty($_POST['courseSelect']))){
+        $body.='<p><strong>Курс: </strong>'.$_POST['courseSelect'].'</p>';
+    }
+
 
     $mail->Body = $body;
 
