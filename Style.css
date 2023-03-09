@@ -101,14 +101,19 @@ hr{
 }
 
 
-img{
-    max-width: 100%;
-    min-width: 50%
-}
-
 .monk{
+    max-width: 100%;
+    min-width: 70%;
     z-index: 1;
     position: relative;
+    
+}
+
+.monk_block{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    min-width: 30%;
 }
 
 .main-header{
@@ -204,7 +209,10 @@ aside
 {
     margin: 20px;
     height: 100%;
+    width: 90%;
 }
+
+
 
 .lines{
     position:absolute;
@@ -224,13 +232,13 @@ aside
 
 .head-text h1{
     font-family: "MontserratAlternates-bold";
-    font-size: 50px;
+    font-size: 40px;
     padding-bottom: 30px;
     text-align: left;
 }
 
 .head-text p {
-    font-size: 24px;
+    font-size: 20px;
     font-family: "MontserratAlternates-light";
 }
 .head-text ul{
@@ -239,7 +247,7 @@ aside
         padding: 0px;
 }
 .head-text li{
-        font-size: 28px;
+        font-size: 20px;
         font-family: "MontserratAlternates-regular";
         margin: 0px;
         padding-top: 25px;
@@ -610,7 +618,7 @@ aside
 h1{
     text-align: center;
     font-family: "MontserratAlternates-bold";
-    font-size: 50px;
+    font-size: 40px;
     padding-bottom: 20px;
     padding: 0px;
 
@@ -633,7 +641,7 @@ p{
 
 
 .text-block h1{
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 
@@ -673,17 +681,29 @@ span{
     max-width: 120px;
     min-width: 100px;
     padding-right: 25px;
+    align-items: center;
+}
+.icon img{
+    width: 100%;
+}
+
+
+.phone img{
+
 }
 
 .icon-block{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    justify-content: left;
+    margin-bottom: 50px;
+    margin-top: 50px;
     
 }
 
-.goals{
+.goals aside{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;   
     
 }
 
@@ -694,14 +714,6 @@ span{
     padding-bottom: 15px;
 }
 
-.menu-list{
-    
-}
-
-
-.answer{
-
-}
 
 .hide{
     display: none;
@@ -1031,14 +1043,25 @@ textarea{
 }
 
 
+.small{
+    display: none;
+}
+.huge{
+    display: block;
+}
 
+.phone img {
+    max-width: 100%;
+    min-width: 70%;
+    z-index: 1;
+    position: relative;
+}
 
-
-
-
-
-
-
+.phone_block{
+    display: flex;
+    max-width: 100%;
+    min-width: 30%;
+}
 
 
 
@@ -1120,19 +1143,25 @@ textarea{
         filter: brightness(20);
         position: fixed;
         left: 20px;
-        top: 5px;
-        min-width: 60px;
+        top: -2px;
+        min-width: 40px;
     }
     .header-burger{
         position: fixed;
         z-index: 4;
         right: 70px;
-        top: 40px;
+        top: 20px;
     }
     .head-text .wrapper{
-        flex-direction: column;
+        flex-direction:column-reverse;
+        margin-bottom: 25px;
+        
     }
-
+    .head-text img{
+        max-width: 60%;
+        min-width: 30%;
+    }
+    
     .header-menu{
         position: fixed;
         flex-direction: column;
@@ -1154,6 +1183,8 @@ textarea{
         text-align: center;
         padding-left: 0px;
     }
+
+
     .header-menu.active{
         flex-direction: column;
         display: flex;
@@ -1162,7 +1193,7 @@ textarea{
         content: '';
         display: block;
         width: 100%;
-        height: 100px;
+        height: 60px;
         background-color: rgb(94, 164, 69);
         z-index: 0;
         position: fixed;
@@ -1177,12 +1208,16 @@ textarea{
     }
     
 
-    
+    .wrapper{
+        width: 100%;
+    }
 
 
+    .goal_block{
+        margin-top: 40px;
+    }
 
-
-    .goals{
+    .goals aside{
         display: block;
     }
 
@@ -1199,6 +1234,28 @@ textarea{
 
     .bot-1 .wrapper{
         flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 25px;
+        text-align: center;
+    }
+    .bot-2 .wrapper{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .bot-text-1 p{
+        display: none;
+    }
+
+
+    .feedback-block {
+        margin-top: 10px;
+        padding-top: 0px;
+    }
+    .feedback_block_main h1{
+        padding-top: 40px;
     }
 
     #fq .wrapper{
@@ -1214,33 +1271,57 @@ textarea{
         width: 100%;
         padding: 0px;
     }
-
-
-
-    h1{
-        font-size: 35px;
-    }
-    .head-text h1{
-        font-size: 35px;
+    .faq{
+        margin-top: 40px;
     }
 
-    .courses .wrapper{
+
+    .feedback-image{
+        position: relative;
+        width: 130px;
+        height: 120px;
+    }
+    .feedback-image img{
         width: 100%;
     }
-    .course{
-        border-radius: 0px;
-        border: 0px;
-        margin: 0px;
-        padding: 0px;
-        /* min-height: 1070px; */
-        min-height: auto;
-        max-height: 1300px;
+
+    h1{
+        font-size: 24px;
+    }
+    .head-text h1{
+        font-size: 24px;
+        padding-bottom: 25px;
+    }
+    .bot-text-1 h1{
+        text-align: center;
+    }
+    .head-text li{
+        font-size: 16px;
     }
 
-
-
+    .answers h1{
+        margin-top: 40px;
+    }
+    .courses-wrapper{
+        width: 90%;
+    }
+    .courses{
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .course {
+        padding: 10px;
+    }
+    .block{
+        padding-top: 10px;
+        min-height: 0px;
+    }
     .course-header p{
         text-align: center;
+    }
+
+    .course-header h1{
+        
     }
 
     .course-text{
@@ -1259,7 +1340,9 @@ textarea{
         position: relative;
         margin-top: 60px;
     }
-
+    .lines{
+        display: none;
+    }
     .text-block{
         width: 100%;
     }
@@ -1279,5 +1362,50 @@ textarea{
     }
     .bot-text-1 p{
         font-size: 18px;
+    }
+    
+    .buttons-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .button-1{
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 40px;
+        border-radius: 50px;
+        width: 90%;
+    }
+    .button-1-w{
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 50px;
+        width: 90%;
+    }
+    .button-3-w, .button-3{
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 50px;
+        width: 90%;
+    }
+
+
+
+    .monk_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-width: 10%;
+
+    }
+    .small{
+        display: block;
+    }
+    .huge{
+        display: none;
     }
 }   
