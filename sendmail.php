@@ -18,21 +18,21 @@
 
     $body = '<h1>Новый клиент!</h1>';
 
-    if(trim(!empty($_POST['name']))){
-        $body.='<p><strong>name:</strong>'.$_POST['name'].'</p>';
-    }
+    // if(trim(!empty($_POST['name']))){
+    //     $body.='<p><strong>name:</strong>'.$_POST['name'].'</p>';
+    // }
 
     if(trim(!empty($_POST['username']))){
         $body.='<p><strong>username: </strong>'.$_POST['username'].'</p>';
     }
 
-    if(trim(!empty($_POST['phone']))){
-        $body.='<p><strong>phone: </strong>'.$_POST['phone'].'</p>';
-    }
+    // if(trim(!empty($_POST['phone']))){
+    //     $body.='<p><strong>phone: </strong>'.$_POST['phone'].'</p>';
+    // }
 
-    if(trim(!empty($_POST['email']))){
-        $body.='<p><strong>email: </strong>'.$_POST['email'].'</p>';
-    }
+    // if(trim(!empty($_POST['email']))){
+    //     $body.='<p><strong>email: </strong>'.$_POST['email'].'</p>';
+    // }
 
     if(trim(!empty($_POST['courseSelect']))){
         $body.='<p><strong>Курс: </strong>'.$_POST['courseSelect'].'</p>';

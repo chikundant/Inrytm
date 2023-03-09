@@ -11,7 +11,7 @@
     свій внутрішній потенціал та силу">
 	<meta name="keywords" content="Медитация, йога, meditation, практики, здоровье">
 	<meta name="robots" content="all">
-
+    <div itemscope itemtype="Images/Monk.png"></div>
 
     <title>Ритм: твій провідний у свідоме життя</title>
 </head>
@@ -76,8 +76,8 @@
                         настрою та щоденні практики <br><br>
                     </p>
                     <div class="buttons-section">
-                        <a href="https://t.me/Rhythm_Meditation_bot" class="button-3">Спробувати</a>
-                        <a href="https://t.me/Rhythm_Meditation_bot" class="button-3">Спробувати</a>
+                        <a href="#crs" class="button-3-w">Долучитись</a>
+                        <a href="https://t.me/Rhythm_Meditation_bot" class="button-3">Зазирнути</a>
                     </div>
                 </aside>
             </div>
@@ -93,11 +93,15 @@
                         до нашого боту та спробувати змінити своє життя <br><br>
                         <i class="cream-text">Звичайно, якщо тобі не страшно стати кращою версією себе</i>
                     </p>
-                    <a href="https://t.me/Rhythm_Meditation_bot" class="button-3">До бота</a>
+                    
                 </aside>
                 <aside class="phone">
                     <img src="Images/Phone1.png" alt="">
                 </aside>
+                <div class="buttons-section">
+                    <a href="#crs" class="button-3-w">Долучитись</a>
+                    <a href="https://t.me/Rhythm_Meditation_bot" class="button-3">Зазирнути</a>
+                </div>
             </div>
         </section>
         <section class="block" id = "goal">
@@ -425,35 +429,38 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h3 class="modal-title">Форма для замовлення</h3>
+              <div class="header-modal-text">
+                <h1 class="modal-title">Форма</h1>
+                <p>Наш менеджер з вами зв'яжеться</p>
+              </div>
               <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body">    
                 <form action="sendmail.php" method="POST" id="form">
                     
-                    <div class="form-item">
+                    <!-- <div class="form-item">
                         <label>Ім'я</label>
                         <input type="text" class="form-input _req" placeholder="ПІБ" name="name" required>
-                    </div>
+                    </div> -->
                     <div class="form-item">
                         <label>Телеграм username</label>
                         <input type="text" class="form-input _req" placeholder="@username" name="username" required>
                     </div>
-                    <div class="form-item">
+                    <!-- <div class="form-item">
                         <label>Номер телефону</label>
                         <input type="tel" class="form-input _req" placeholder="+380" name="phone" required>
-                    </div>
-                   <div class="form-item">
+                    </div> -->
+                   <!-- <div class="form-item">
                         <label>Email</label>
                         <input type="email" class="form-input _req" placeholder="Введіть ваш email" 
                         name="email" required>
-                   </div>   
+                   </div>    -->
                    <div class="form-item">
-                    <label>Оберіть курс</label>
+                    <label>Оберіть план</label>
                     <select name="courseSelect" id="" class="form-input" >
-                        <option class="form-input">Телеграм бот</option>
-                        <option class="form-input">Базовий курс</option>
-                        <option class="form-input">Трансформаційний курс</option>
+                        <option class="form-input">1 місяць</option>
+                        <option class="form-input">3 місяці</option>
+                        <option class="form-input">6 місяців</option>
                     </select>
                 </div>
                    <div class="form-item"> 
