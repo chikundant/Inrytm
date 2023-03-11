@@ -677,9 +677,10 @@ span{
     display: flex;
     justify-content: center;
 
-    justify-content: center;
     margin: 0px auto;
     flex-wrap: wrap;
+
+    
 }
 .mrgn-top{
     margin-top: 50px;
@@ -1294,6 +1295,10 @@ textarea{
     }
     .faq-item .question,.answer{
         text-align: left;
+
+    }
+    .faq-item .question{
+        font-size: 20px;
     }
     .faq{
         width: 90%;
@@ -1305,17 +1310,9 @@ textarea{
     .faq{
         margin-top: 40px;
     }
-
-
     .feedback-image{
-        position: relative;
-        width: 130px;
-        height: 120px;
+        height: 80%;
     }
-    .feedback-image img{
-        width: 100%;
-    }
-
     h1{
         font-size: 24px;
     }
@@ -1356,6 +1353,9 @@ textarea{
 
     .course-header h1{
         
+    }
+    .bottom{
+        font-size: 14px;
     }
 
     .course-text{
