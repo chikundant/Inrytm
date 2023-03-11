@@ -94,7 +94,10 @@ hr{
 
 }
 
-
+.head-text .wrapper:first-child ul, .buttons-section{
+    position: relative;
+    z-index: 10;
+}
 
 .logo{
     padding: 10px;
@@ -102,18 +105,17 @@ hr{
 
 
 .monk{
-    max-width: 100%;
-    min-width: 70%;
-    z-index: 1;
+    z-index: 0;
     position: relative;
-    
+    width: 750px;
+    padding-left: 50px;
 }
 
 .monk_block{
     display: flex;
     justify-content: center;
-    max-width: 100%;
     min-width: 30%;
+
 }
 
 .main-header{
@@ -227,7 +229,9 @@ aside
 
 
 
-
+.head-text .wrapper{
+    width: 70%;
+}
 
 
 .head-text h1{
@@ -548,13 +552,14 @@ aside
     
 }
 .feedback{
-    width: 300px;
-    height: 450px;
-    background-color: white;
+    width: 80%;
+
     border-radius: 45px;
     padding-top: 20px;
+
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
 
     margin: 0px auto;
@@ -577,8 +582,10 @@ aside
 
 .feedback-image{
     position: relative;
-    width: 120px;
-    height: 120px;
+    height: 100%;
+}
+.feedback-image img{
+    height: 100%;
 }
 
 .top{
@@ -586,6 +593,7 @@ aside
     align-items:center;
     justify-content:left;
     padding-left: 20px;
+    height: 125px;
 }
 .top-text{
     padding-left: 30px;
@@ -610,7 +618,8 @@ aside
 
 .bottom span{
     display: block;
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 50px;
 }
 
 
@@ -683,7 +692,7 @@ span{
     align-items: center;
 }
 .icon img{
-    width: 100%;
+    width: 100px;
 }
 
 
@@ -1066,19 +1075,18 @@ textarea{
     display: block;
 }
 
-.phone img {
-    max-width: 100%;
-    min-width: 70%;
-    z-index: 1;
+.phone{
     position: relative;
+
 }
 
-.phone_block{
-    display: flex;
-    max-width: 100%;
-    min-width: 30%;
-}
 
+.phone img {
+    z-index: 1;
+    max-width: 75%;
+    min-width: 300px;
+
+}
 
 
 
@@ -1174,10 +1182,14 @@ textarea{
         
     }
     .head-text img{
-        width: 50%;
+        width: 100%;
         min-width: 30%;
     }
     
+    .head-text .wrapper{
+        width: 90%;
+    }
+
     .header-menu{
         position: fixed;
         flex-direction: column;
@@ -1390,6 +1402,7 @@ textarea{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .button-1{
         padding: 10px;
@@ -1397,7 +1410,13 @@ textarea{
         margin-top: 40px;
         border-radius: 50px;
         width: 90%;
+        
     }
+
+    .buttons-section a {
+        margin-right: 0px;
+    }
+
     .button-1-w{
         padding: 10px;
         font-size: 16px;
@@ -1421,8 +1440,11 @@ textarea{
         justify-content: center;
         align-items: center;
         text-align: center;
-        min-width: 10%;
 
+
+    }   
+    .monk{
+        padding-left: 0px;
     }
     .small{
         display: block;
