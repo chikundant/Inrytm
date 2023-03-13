@@ -578,14 +578,16 @@ aside
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    height: 10;
 }
+
 
 .feedback-image{
     position: relative;
     height: 100%;
 }
 .feedback-image img{
-    height: 100%;
+    height: 90%;
 }
 
 .top{
@@ -620,6 +622,7 @@ aside
     display: block;
     padding-top: 25px;
     padding-bottom: 50px;
+    font-size: 16px;
 }
 
 
@@ -1063,7 +1066,8 @@ textarea{
 
 
 .feedback-block .courses-wrapper{
-
+    overflow: scroll;
+    height: 100vh;
 }
 .feedback-block {
     height: auto;
@@ -1357,7 +1361,9 @@ textarea{
     .bottom{
         font-size: 14px;
     }
-
+    .bottom span{
+        font-size: 14px;
+    }
     .course-text{
         height: auto;
         overflow: auto;
