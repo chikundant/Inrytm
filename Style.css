@@ -60,7 +60,9 @@ li{
 .white-bg{
     background-color: white;
 }
-
+.sertificate_block{
+    display: flex;
+}
 .green-bg{
     background-color: rgb(95, 164, 69);
 }
@@ -228,6 +230,26 @@ aside
 
 
 
+.certificate_block{
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.certificates{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cert{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.cert img{
+    max-width: 100%;
+    min-width: 300px;
+}
 
 
 .head-text .wrapper{
@@ -1214,6 +1236,15 @@ textarea{
         overflow: auto;
         display: none;
     }
+    .certificate_block{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .certificates{
+        display: flex;
+        flex-direction: column;
+    }
     .menu-item a{
         color: white;
     }
@@ -1289,7 +1320,7 @@ textarea{
     }
 
     .bot-text-1 p{
-        display: none;
+        padding-bottom: 25px;
     }
 
 
