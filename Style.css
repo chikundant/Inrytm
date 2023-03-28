@@ -742,7 +742,9 @@ span{
     
 }
 
-
+.goal_block{
+    padding-bottom: 0px;
+}
 .faq{
     width: 80%;
     margin-top: 100px;
